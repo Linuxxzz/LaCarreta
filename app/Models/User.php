@@ -20,8 +20,16 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'age',
+        'phone',
         'email',
+        'address',
         'password',
+        'is_admin'
+    ];
+
+    protected $casts = [
+        'is_admin' => 'boolean',
     ];
 
     /**
