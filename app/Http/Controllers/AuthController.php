@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Hash;
+
+
+
 
 class AuthController extends Controller
 {
@@ -41,7 +45,7 @@ class AuthController extends Controller
         //Iniciar sesión de forma automática
         Auth::login($user);
 
-        return redirect()->route('pedidos.index');
+        return redirect()->route('acceso');
 
     }
 
@@ -63,7 +67,7 @@ class AuthController extends Controller
         // Obtener información de la sesión y generar sus credenciales
         $request -> session()->regenerate();
         // Redireccionar al usuario con su sesión iniciada
-        return redirect()->route('pedidos.index');
+        return redirect()->route('registro');
     }
 
     // Si los datos son incorrectos, mandar un error

@@ -11,7 +11,6 @@
 
         <h1>INICIO DE SESIÓN</h1>
 
-        
         <form action="{{ route('acceso.store') }}" method="POST">
             @csrf 
 

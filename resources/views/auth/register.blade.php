@@ -31,10 +31,12 @@
         <br>
 
 
+        @if(auth()->user()->is_admin)
             <div class="form-check">
                 <input type="checkbox" name="is_admin" value="1">
                 <label>Es administrador</label>
             </div>
+        @endif
   
 
         <button type="submit" class="btn btn-primary">Guardar</button>
